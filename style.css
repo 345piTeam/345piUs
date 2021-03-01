@@ -134,3 +134,33 @@ p{
     font-size:24px;
     line-height: 40px;
 }
+.messageSmall{
+    font-size:16px;
+    font-weight: 600;
+    color:#838FB7;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    padding:24px 8px;
+}
+.messageGreen{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color:#5CA83A;
+    font-size: 42px;
+    
+}
+.messagePurple{
+    font-size:32px;
+    font-weight: 600;
+    color:#3E466C; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+#buttons2{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
