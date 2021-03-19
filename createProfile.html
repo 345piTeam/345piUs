@@ -4,7 +4,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href ="style.css">
-<!--    <link rel="stylesheet" href ="button.css">-->
+    <link rel="stylesheet" href ="form.css">
+    <script src="https://kit.fontawesome.com/e02a450786.js" crossorigin="anonymous"></script>
+   
+    <script>
+    function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+    </script>
 </head>
 <body>
   <div id="container">
@@ -13,12 +24,34 @@
       <div class="messageSmall">Create a profile to save your process and continue learning</div>
     <div id = "buttons2">
         <div>
-           <a href="game.html"><div class="button b1"><span>Create a Profile</span></div></a><div>
+           <a href="#"><div class="open-button button b1" onclick="openForm()"><span>Create a Profile</span></div></a><div>
             <div><a href="#"><div class="button b2"><span>Later</span></div></a></div>
     </div>
     </div>
     </div>
+    <div class="form-popup" id="myForm">
+  <form action="#" class="form-container">      
+   <button type="submit" class="iconBtn" onclick="closeForm()"><span class="iconGrey"><i class="fas fa-times"></i></span></button>
+    <div class="titlePurple">Create an account to continue</div>
+    </br>
+    <label for="username"><b>Username</b></label></br>
+    <input type="text" placeholder="Enter Username" name="Username" required>
+    </br>
+    <label for="email"><b>Email</b></label></br>
+    <input type="text" placeholder="Enter Email" name="email" required>
+</br>
+    <label for="psw"><b>Password</b></label></br>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+</br>
+    <label for="confirmPassword"><b>Confirm Password</b></label></br>
+    <input type="text" placeholder="Enter Password Again" name="cpsw" required>
+    </br>
+    <button type="submit" class="btn b1">Submit</button>
+
+  </form>
+</div>
     </div>
     </div>
+    
 </body>
 </html>

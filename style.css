@@ -164,3 +164,24 @@ p{
     align-items: center; 
     justify-content: center;
 }
+.iconGrey{
+    color:#909090;
+    font-size:16px;
+}
+.iconBtn{
+    background-color: white;
+    border:none;
+    width:20px;
+    height: 20px;
+    margin-left: 90%;
+}
+.titleGreen{
+    font-size: 24px;
+    font-family: playfair-display, serif;
+    color:#3aa859;
+}
+.titlePurple{
+    font-size:24px;
+    font-weight: 600;
+    color:#838FB7; 
+}
