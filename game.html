@@ -1,37 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e02a450786.js" crossorigin="anonymous"></script>
-<!--
-    <script>
-        function myFunction() {
-  alert("You are correct!");
-}
-    </script>
--->
-</head>
-<body>
-    <div id="container">
-        <div id ="leftCol">
-            <img src="images/questions/heartRate.png" alt="/" ;>
-        </div>
-        <div id ="rightCol">
-            <div id="title">First Derivative of the Electrocardiogram</div>
-            <p>Your Patient needs to be administrated life saving medicine when his heart rate is <b><i>increasing</i></b> the fast. Choose the time to administrator the medicine?</p>
-
-
-
-            <div id="choices">
-                <a href="#"><div class="button square"><span>1s - 2s</span></div></a>
-                <a href="#"><div class="button square"><span>2s - 3s</span></div></a>
-                <a href="#"><div class="button square"><span>3s - 4s</span></div></a>
-                <a href="#"><div class="button square"><span>4s - 5s</span></div></a>
-<!--                <a href="#"><div class="button b3"><span>Undo</span></div></a><div>-->
+<!DOCTYPE HTML>  
+<html>  
+    <head>  
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/e02a450786.js" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>  
+      
+    <body> 
+        <div id="container">
+            <div id ="leftCol">
+                <img src="images/heartRate.png" alt="/" ;>
+            </div>
+            <div id ="rightCol">
+                <div id="title">Warm Up</div>
+                <p>Your Patient needs to be administrated life saving medicine when his heart rate is increasing the fast. Choose the time to administrator the medicine?</p>
+                <div id="choices">
+                    <p id = "GFG_UP" style =  
+                        "font-size: 15px; font-weight: bold;"> 
+                    </p> 
+                    <a href="#"><div class="button square" id="1" onClick="GFG_click(this.id)"> 1s-2s </div></a><div></div>
+                    <a href="#"><div class="button square" id="2" onClick="GFG_click(this.id)"> 2s-3s </div></a><div></div>
+                    <a href="#"><div class="button square" id="3" onClick="GFG_click(this.id)"> 3s-4s </div></a><div></div>
+                    <a href="#"><div class="button square" id="4" onClick="GFG_click(this.id)"> 4s-5s </div></a><div></div>
+            
+                    <p id = "GFG_DOWN" style =  
+                        "color:green; font-size: 20px; font-weight: bold;"> 
+                    </p> 
+                </div>
             </div>
         </div>
-                </div>
-</body>
-</html>
+          
+        <script> 
+            var el_up = document.getElementById("GFG_UP"); 
+            var el_down = document.getElementById("GFG_DOWN"); 
+            var nextPage = false;
+            function GFG_click(clicked) { 
+                if(clicked == 3){
+                    //swal("Good job!", "You saved the patients life!", "success");
+                    swal("Good job! You saved the patients life!", "","success", {buttons: ["Continue",false]});
+                    swal("Good job! You saved the patients life!", "","success", {
+                    buttons: {
+                        catch: {
+                        text: "Continue",
+                        value: "nextPage",
+                        }
+                    },
+                    })
+                    .then((value) => {
+                    switch (value) {
+                        case "nextPage":
+                        window.location.href="day.html";
+                    }
+                    });
+                }else{
+                    swal("Oops!", "Try Again!", "failure");
+                }
+            }          
+        </script>  
+    </body>  
+</html>           
